@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-26T09:52:12.503Z",
+  "updated_at": "2026-08-26T09:57:01.981Z",
   "checks": {
     "uptime": {
       "status": "OK",
-      "updated_at": "2026-08-26T09:52:12.503Z",
+      "updated_at": "2026-08-26T09:57:01.981Z",
       "since": "2026-08-26T09:23:00Z",
       "issue_number": null,
       "detail": {
@@ -20,17 +20,17 @@
       "skipped": false
     },
     "key_pages": {
-      "status": "NG",
-      "updated_at": "2026-08-26T09:52:12.503Z",
-      "since": "2026-08-26T09:52:12.503Z",
-      "issue_number": 1,
+      "status": "OK",
+      "updated_at": "2026-08-26T09:57:01.981Z",
+      "since": "2026-08-26T09:57:01.981Z",
+      "issue_number": null,
       "detail": {
         "/": {
-          "expected_found": false,
+          "expected_found": true,
           "console_errors": []
         },
         "/admin": {
-          "expected_found": false,
+          "expected_found": true,
           "console_errors": []
         }
       },
@@ -38,7 +38,7 @@
     },
     "supabase": {
       "status": "OK",
-      "updated_at": "2026-08-26T09:52:12.503Z",
+      "updated_at": "2026-08-26T09:57:01.981Z",
       "since": "2026-08-26T09:23:00Z",
       "issue_number": null,
       "detail": {
@@ -48,7 +48,7 @@
     },
     "deployments": {
       "status": "OK",
-      "updated_at": "2026-08-26T09:52:12.503Z",
+      "updated_at": "2026-08-26T09:57:01.981Z",
       "since": "2026-08-26T09:23:00Z",
       "issue_number": null,
       "detail": {

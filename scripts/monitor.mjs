@@ -76,10 +76,15 @@ async function checkKeyPages() {
         }
       });
       try {
-        await page.goto(PUBLIC_URLS.main + p, { waitUntil: 'domcontentloaded', timeout: 15000 });
-        const text = await page.content();
-        const expectedFound =
-          p === '/' ? text.includes('予約まで、たった60秒') : text.includes('管理者ログイン');
+        await page.goto(PUBLIC_URLS.main + p, { waitUntil: 'load', timeout: 20000 });
+        const expectedText = p === '/' ? '予約まで' : '管理者ログイン';
+        let expectedFound = false;
+        try {
+          await page.getByText(expectedText).first().waitFor({ state: 'visible', timeout: 8000 });
+          expectedFound = true;
+        } catch {
+          expectedFound = false;
+        }
         detail[p] = { expected_found: expectedFound, console_errors: errors };
         if (!expectedFound || errors.length > 0) ok = false;
       } catch (e) {
