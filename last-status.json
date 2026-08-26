@@ -1,0 +1,44 @@
+{
+  "updated_at": "2026-08-26T09:23:00Z",
+  "checks": {
+    "uptime": {
+      "status": "OK",
+      "updated_at": "2026-08-26T09:23:00Z",
+      "since": "2026-08-26T09:23:00Z",
+      "issue_number": null,
+      "detail": {
+        "https://reservation-lp.vercel.app": { "http_status": 200 },
+        "https://reservation-lp-shingo45bc-1061s-projects.vercel.app": { "http_status": 302 },
+        "https://reservation-lp-git-main-shingo45bc-1061s-projects.vercel.app": { "http_status": 302 }
+      },
+      "skipped": false
+    },
+    "key_pages": {
+      "status": "OK",
+      "updated_at": "2026-08-26T09:23:00Z",
+      "since": "2026-08-26T09:23:00Z",
+      "issue_number": null,
+      "detail": {
+        "/": { "expected_found": true, "console_errors": [] },
+        "/admin": { "expected_found": true, "console_errors": [] }
+      },
+      "skipped": false
+    },
+    "supabase": {
+      "status": "OK",
+      "updated_at": "2026-08-26T09:23:00Z",
+      "since": "2026-08-26T09:23:00Z",
+      "issue_number": null,
+      "detail": { "http_status": 200 },
+      "skipped": false
+    },
+    "deployments": {
+      "status": "OK",
+      "updated_at": "2026-08-26T09:23:00Z",
+      "since": "2026-08-26T09:23:00Z",
+      "issue_number": null,
+      "detail": { "latest_id": "dpl_GiHWZZSrbVJY8cKTxJoLQTcpjd9U", "latest_state": "READY" },
+      "skipped": false
+    }
+  }
+}

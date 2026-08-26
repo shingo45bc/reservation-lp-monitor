@@ -1,0 +1,11 @@
+{
+  "name": "reservation-lp-monitor",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "monitor": "node scripts/monitor.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.47.0"
+  }
+}
