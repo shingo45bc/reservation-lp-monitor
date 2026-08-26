@@ -1,0 +1,60 @@
+name: reservation-lp monitor
+
+on:
+  schedule:
+    - cron: '3,18,33,48 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: reservation-lp-monitor
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SUPABASE_URL: https://sbpwyziyjrtjyxjxewej.supabase.co
+      SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_TEAM_ID: team_CJVsV9eO20zC1smwpjEbwA7V
+      VERCEL_PROJECT_ID: prj_8wzgmInJbpNecvAeR0F9Ns3NAOzo
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run non-destructive monitor checks
+        run: node scripts/monitor.mjs
+
+      - name: Commit updated status files
+        run: |
+          git config user.name "reservation-lp-monitor-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add last-status.json status-log.jsonl
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update monitor status"
+            git push
+          else
+            echo "No status changes to commit"
+          fi
