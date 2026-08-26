@@ -1,1 +1,2 @@
 {"ts":"2026-08-26T09:23:00Z","uptime":"OK","key_pages":"OK","supabase":"OK","deployments":"OK","anomaly":false,"note":"Seed baseline carried over from manual verification before GitHub Actions was wired up."}
+{"ts":"2026-08-26T09:52:12.503Z","uptime":"OK","key_pages":"NG","supabase":"OK","deployments":"OK","anomaly":true}
