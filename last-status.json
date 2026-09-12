@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-09-12T18:26:25.113Z",
+  "updated_at": "2026-09-12T18:39:06.269Z",
   "checks": {
     "uptime": {
       "status": "OK",
-      "updated_at": "2026-09-12T18:26:25.113Z",
+      "updated_at": "2026-09-12T18:39:06.269Z",
       "since": "2026-08-26T09:23:00Z",
       "issue_number": null,
       "detail": {
@@ -21,7 +21,7 @@
     },
     "key_pages": {
       "status": "OK",
-      "updated_at": "2026-09-12T18:26:25.113Z",
+      "updated_at": "2026-09-12T18:39:06.269Z",
       "since": "2026-08-26T09:57:01.981Z",
       "issue_number": null,
       "detail": {
@@ -37,18 +37,18 @@
       "skipped": false
     },
     "supabase": {
-      "status": "OK",
-      "updated_at": "2026-09-12T18:26:25.113Z",
-      "since": "2026-09-12T13:37:07.378Z",
-      "issue_number": null,
+      "status": "NG",
+      "updated_at": "2026-09-12T18:39:06.269Z",
+      "since": "2026-09-12T18:39:06.269Z",
+      "issue_number": 3,
       "detail": {
-        "http_status": 200
+        "http_status": 504
       },
       "skipped": false
     },
     "deployments": {
       "status": "OK",
-      "updated_at": "2026-09-12T18:26:25.113Z",
+      "updated_at": "2026-09-12T18:39:06.269Z",
       "since": "2026-08-26T09:23:00Z",
       "issue_number": null,
       "detail": {
